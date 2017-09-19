@@ -35,9 +35,13 @@ def create_horizontal_border_line(maxColumnLength):
 def create_border_lines(horizontalBorderLine):
 	bottomBorderLine = horizontalBorderLine.replace("-", "_")
 	topBorderLine = bottomBorderLine.replace("|", "_")
+	
+	#Editing the first and last characters as a list since strings are immutable in Python
 	topBorderLine = list(topBorderLine)
 	topBorderLine[0] = " "
 	topBorderLine[-1] = " "
+	
+	#Joining them to create a new string
 	topBorderLine = "".join(topBorderLine)
 	
 	return (topBorderLine,bottomBorderLine)

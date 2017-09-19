@@ -15,6 +15,8 @@ def parse_csv(file):
 #Check every cell in a column to determine the length of the column
 def find_max_column_length(table):
 	maxRecordLength = len(table[0])
+	
+	#Creating a list with a default length of the number of columns in the table
 	maxColumnLength = [0] * maxRecordLength
 	
 	for record in table:

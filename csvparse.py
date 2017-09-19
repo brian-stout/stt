@@ -2,9 +2,9 @@
 
 import os
 
-def parse_csv(file):
+def parse_csv(fileHandle):
 	table = []
-	for line in file:
+	for line in fileHandle:
 		record = line.replace(", ", ",")
 		record = record.strip()
 		record = record.split(",")
@@ -74,8 +74,8 @@ def print_2d_table(table):
 		print(bottomBorderLine)
 
 def main():
-	with open("csv.txt") as file:
-		table = parse_csv(file)
+	with open("csv.txt") as fileHandle:
+		table = parse_csv(fileHandle)
 		print_2d_table(table)
 
 if __name__ == "__main__":
